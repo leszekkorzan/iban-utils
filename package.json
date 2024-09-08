@@ -1,0 +1,24 @@
+{
+  "name": "iban-utils",
+  "description": "...<fill>......",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "start": "tsc",
+    "build": "tsup",
+    "biome:ci": "npx biome ci .",
+    "biome:fix": "npx @biomejs/biome format --write && npx @biomejs/biome lint --write"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.8"
+  }
+}
