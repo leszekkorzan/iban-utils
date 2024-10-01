@@ -1,11 +1,13 @@
 {
   "name": "iban-utils",
   "description": "...<fill>......",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "files": ["/dist"],
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "start": "tsc",
     "build": "tsup",
