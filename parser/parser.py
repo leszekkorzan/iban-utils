@@ -2,7 +2,7 @@
 import xmltodict 
 import json
 
-with open('plewiba.xml', 'r') as file: 
+with open('parser/plewiba.xml', 'r') as file: 
     my_xml = file.read() 
   
 releaseDateInput = input('Data release date: ')
@@ -91,6 +91,6 @@ preparedWithVersion = {
 
 conversion = json.dumps(preparedWithVersion, indent=2, ensure_ascii=False)
 
-with open('out.json', mode='w', encoding='utf-8') as json_file:
+with open('src/data/pl.json', mode='w', encoding='utf-8') as json_file:
     json_file.write(conversion)
     json_file.close()
