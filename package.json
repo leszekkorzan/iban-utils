@@ -9,9 +9,10 @@
     "start": "tsc",
     "build": "tsup",
     "biome:ci": "npx biome ci .",
-    "biome:fix": "npx @biomejs/biome format --write && npx @biomejs/biome lint --write"
+    "biome:fix": "npx @biomejs/biome format --write && npx @biomejs/biome lint --write",
+    "release": "npm run build && changeset publish"
   },
-  "author": "",
+  "author": "leszekkorzan",
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
