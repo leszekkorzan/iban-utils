@@ -89,8 +89,10 @@ preparedWithVersion = {
     'data': prepared
 }
 
-conversion = json.dumps(preparedWithVersion, indent=2, ensure_ascii=False)
+conversion = json.dumps(preparedWithVersion, indent=None, ensure_ascii=False, separators=(',', ':'))
 
 with open('src/data/pl.json', mode='w', encoding='utf-8') as json_file:
     json_file.write(conversion)
     json_file.close()
+
+print('--- FINISHED ---')

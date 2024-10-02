@@ -50,12 +50,14 @@ type PLBankNumberData = {
 	generation_date: string;
 };
 
-export type FaviconConfig = {
-	provider: "google";
-	defaultGoogleFaviconSize: number;
-} | {
-	provider: "duckduckgo";
-};
+export type FaviconConfig =
+	| {
+			provider: "google";
+			defaultGoogleFaviconSize: number;
+	  }
+	| {
+			provider: "duckduckgo";
+	  };
 
 const IBAN_LENGTHS = {
 	AD: 24,
@@ -140,25 +142,28 @@ const IBAN_LENGTHS = {
 export default class BankDataUtils {
 	defaultCountryCode?: keyof typeof IBAN_LENGTHS;
 	faviconConfig?: FaviconConfig = {
-		provider: 'google',
-		defaultGoogleFaviconSize: 128
+		provider: "google",
+		defaultGoogleFaviconSize: 128,
 	};
 
-	constructor(defaultCountryCode?: keyof typeof IBAN_LENGTHS, faviconConfig?: FaviconConfig) {
+	constructor(
+		defaultCountryCode?: keyof typeof IBAN_LENGTHS,
+		faviconConfig?: FaviconConfig,
+	) {
 		this.defaultCountryCode = defaultCountryCode;
-		if(faviconConfig){
-			this.faviconConfig = faviconConfig
+		if (faviconConfig) {
+			this.faviconConfig = faviconConfig;
 		}
 	}
 
 	private constructFaviconUrl(website: string) {
 		switch (this.faviconConfig?.provider) {
-			case 'google':
-				return `https://www.google.com/s2/favicons?domain=${website}&sz=${this.faviconConfig.defaultGoogleFaviconSize}`
-			case 'duckduckgo':
-				return `https://icons.duckduckgo.com/ip3/${website}.ico`
+			case "google":
+				return `https://www.google.com/s2/favicons?domain=${website}&sz=${this.faviconConfig.defaultGoogleFaviconSize}`;
+			case "duckduckgo":
+				return `https://icons.duckduckgo.com/ip3/${website}.ico`;
 			default:
-				return null
+				return null;
 		}
 	}
 
@@ -175,7 +180,9 @@ export default class BankDataUtils {
 								data_version: data.data_version,
 							},
 							...bank,
-							faviconUrl: bank.website ? this.constructFaviconUrl(bank.website) : null,
+							faviconUrl: bank.website
+								? this.constructFaviconUrl(bank.website)
+								: null,
 							branches: null,
 							branch: {
 								...branch,

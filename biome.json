@@ -4,7 +4,8 @@
 		"enabled": true
 	},
 	"files": {
-		"include": ["src/*"]
+		"include": ["src/*"],
+		"ignore": ["src/data/*"]
 	},
 	"linter": {
 		"enabled": true,

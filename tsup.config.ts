@@ -6,5 +6,9 @@ export default defineConfig({
   dts: true,
   shims: true,
   skipNodeModulesBundle: true,
-  clean: true
+  clean: true,
+  minify: 'terser',
+  loader: {
+    '.json': 'file',
+  },
 });

@@ -4,7 +4,7 @@ import type { CountryCode, FaviconConfig } from "./BankDataUtils";
 export function getBankDataFromIBAN(
 	iban: string,
 	defaultCountryCode?: CountryCode,
-	faviconConfig?: FaviconConfig
+	faviconConfig?: FaviconConfig,
 ) {
 	const utils = new BankDataUtils(defaultCountryCode, faviconConfig);
 	const response = utils.getBankDataFromIBAN(iban);
