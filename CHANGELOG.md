@@ -1,5 +1,12 @@
 # iban-utils
 
+## 0.1.1
+
+### Patch Changes
+
+- f73b89a: reduced bundle size
+- 4a24195: fixes & added readme
+
 ## 0.1.0
 
 ### Minor Changes
