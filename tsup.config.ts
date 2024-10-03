@@ -8,7 +8,8 @@ export default defineConfig({
   skipNodeModulesBundle: true,
   clean: true,
   minify: 'terser',
-  loader: {
-    '.json': 'file',
-  },
+  splitting: true,
+  // loader: {
+  //   '.json': 'file',
+  // },
 });

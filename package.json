@@ -1,10 +1,30 @@
 {
   "name": "iban-utils",
-  "description": "...<fill>......",
+  "description": "Tool for validating IBANs & extracting detailed bank and branch information.",
   "version": "0.1.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/leszekkorzan/iban-utils",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leszekkorzan/iban-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kefranabg/readme-md-generator/issues"
+  },
+  "keywords": [
+    "IBAN",
+    "IBAN validation",
+    "IBAN extractor",
+    "Poland IBAN",
+    "bank info from IBAN",
+    "nodejs IBAN package",
+    "validate IBAN",
+    "IBAN node",
+    "polish iban",
+    "polish bank number"
+  ],
   "files": [
     "/dist"
   ],
@@ -17,7 +37,7 @@
     "test": "npm run biome:ci && jest"
   },
   "author": "leszekkorzan",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
     "@changesets/cli": "^2.27.8",
