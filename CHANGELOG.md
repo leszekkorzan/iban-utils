@@ -1,5 +1,11 @@
 # iban-utils
 
+## 0.1.3
+
+### Patch Changes
+
+- 3940075: updated readme
+
 ## 0.1.1
 
 ### Patch Changes
